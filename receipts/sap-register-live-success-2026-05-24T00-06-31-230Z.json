@@ -1,0 +1,38 @@
+{
+  "mode": "sap-register-live-success",
+  "createdAt": "2026-05-24T00:06:31.230Z",
+  "wallet": "FJdxwPbWgFqghFaFyW9qSQW1jbMhuTrDfTrbZAuVV4SZ",
+  "signature": "4iLknBBvQvpkXiHPSiV4AKmF2i1oUb5jdXPvMkptSJfh823rMXBoZerzcrQxdPPSs1Rn63NMuwwsERa6hQX87Jpe",
+  "explorer": "https://explorer.solana.com/tx/4iLknBBvQvpkXiHPSiV4AKmF2i1oUb5jdXPvMkptSJfh823rMXBoZerzcrQxdPPSs1Rn63NMuwwsERa6hQX87Jpe?cluster=mainnet-beta",
+  "agent": "3k7By2iJBq95ZHDm2UdkQPk3mvDFymPGKXXhnLGGAzTz",
+  "stats": "C9rQ35HR9T5oCApGfT1nabxce1ZBdHR9AwECGsWFLAuC",
+  "globalRegistry": "9odFrYBBZq6UQC6aGyzMPNXWJQn55kMtfigzhLg6S6L5",
+  "x402Endpoint": "https://api.acedata.cloud/openai/chat/completions",
+  "agentUri": "https://api.acedata.cloud/openai/chat/completions",
+  "estimatedFeeLamports": 5000,
+  "spentLamports": 40428680,
+  "spentSol": 0.04042868,
+  "beforeSol": 0.20001,
+  "afterSol": 0.15958132,
+  "hardCapSol": 0.15,
+  "accounts": {
+    "agentCreated": true,
+    "statsCreated": true,
+    "globalRegistryExists": true,
+    "agentOwner": "SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ",
+    "statsOwner": "SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ"
+  },
+  "simulation": {
+    "unitsConsumed": 39755,
+    "logs": [
+      "Program SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ invoke [1]",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program data: S5Ijd5ZwDyYowli9y1WwTCClx+iFcXwWCz6RpaKBlfTzlEc5facCGdSISVuOIT4L3CENnWD+USLLeuGJd0AYSKZ1/D+9/jgWFAAAAFRvbGdhIE9PQkUgQWNlIEFnZW50AQAAABoAAABhY2U6c29sYW5hLWFjY291bnQtc3VtbWFyeQVBEmoAAAAA",
+      "Program SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ consumed 39755 of 200000 compute units",
+      "Program SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ success"
+    ]
+  }
+}

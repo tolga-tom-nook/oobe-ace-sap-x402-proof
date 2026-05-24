@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import { AnchorProvider, Program, Wallet } from '@coral-xyz/anchor';
+import { Connection, Keypair, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
+const RPC=process.env.SOLANA_RPC_URL||'https://api.mainnet-beta.solana.com';
+const KEYPAIR=process.env.SOLANA_KEYPAIR_PATH||'/home/ubuntu/bounty-work/oobe-wallet/solana-mainnet-agent-keypair.json';
+const PROGRAM_ID=new PublicKey('SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ');
+const idl=JSON.parse(fs.readFileSync('/home/ubuntu/bounty-work/synapse-sap-sdk/src/idl/synapse_agent_sap.json','utf8'));
+const kp=Keypair.fromSecretKey(Uint8Array.from(JSON.parse(fs.readFileSync(KEYPAIR,'utf8'))));
+const conn=new Connection(RPC,'confirmed');
+const program=new Program(idl,PROGRAM_ID,new AnchorProvider(conn,new Wallet(kp),{commitment:'confirmed'}));
+const [globalRegistry]=PublicKey.findProgramAddressSync([Buffer.from('sap_global')],PROGRAM_ID);
+const ix=await program.methods.initializeGlobal().accounts({authority:kp.publicKey,globalRegistry,systemProgram:SystemProgram.programId}).instruction();
+const latest=await conn.getLatestBlockhash('confirmed');
+const tx=new Transaction({feePayer:kp.publicKey,blockhash:latest.blockhash,lastValidBlockHeight:latest.lastValidBlockHeight}).add(ix);
+tx.sign(kp);
+const fee=await tx.getEstimatedFee(conn);
+const sim=await conn.simulateTransaction(tx);
+console.log(JSON.stringify({globalRegistry:globalRegistry.toBase58(),estimatedFeeLamports:fee,simErr:sim.value.err,simLogs:sim.value.logs,unitsConsumed:sim.value.unitsConsumed},null,2));

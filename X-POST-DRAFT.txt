@@ -1,0 +1,26 @@
+# OOBE × AceDataCloud bounty submission
+
+Category: Ace Data Cloud Usage (x402 Facilitator)
+
+I built and ran a SAP-registered Solana agent proof that uses AceDataCloud over Solana x402 and records on-chain settlement evidence.
+
+What it does:
+- Registers an autonomous agent on Synapse Agent Protocol mainnet.
+- Uses AceDataCloud's OpenAI-compatible API through Solana x402 payment flow.
+- Records receipts for SAP registration, Ace x402 quote/payment, API response, and balances.
+- Documents the SDK/IDL drift discovered while registering the SAP agent.
+
+Proof:
+- SAP agent PDA: 3k7By2iJBq95ZHDm2UdkQPk3mvDFymPGKXXhnLGGAzTz
+- SAP registration tx: 4iLknBBvQvpkXiHPSiV4AKmF2i1oUb5jdXPvMkptSJfh823rMXBoZerzcrQxdPPSs1Rn63NMuwwsERa6hQX87Jpe
+- SAP explorer tx: https://explorer.solana.com/tx/4iLknBBvQvpkXiHPSiV4AKmF2i1oUb5jdXPvMkptSJfh823rMXBoZerzcrQxdPPSs1Rn63NMuwwsERa6hQX87Jpe?cluster=mainnet-beta
+- Ace x402 settlement tx: 3EF2wCNajTCnei6x4ZEe3fUevCqcUAx7WZPGKssuMniAKLgvt7ztmFiAU2xbpVXVHGiytd7gFP1Eszd155ch6CZH
+- Ace x402 explorer tx: https://explorer.solana.com/tx/3EF2wCNajTCnei6x4ZEe3fUevCqcUAx7WZPGKssuMniAKLgvt7ztmFiAU2xbpVXVHGiytd7gFP1Eszd155ch6CZH?cluster=mainnet-beta
+
+Repo includes:
+- SUBMISSION-PROOF.md for full proof details
+- receipts/*.json for spend/accounting evidence
+- scripts/send-sap-register-legacy-accounts.mjs for the successful guarded SAP registration path
+- ISSUE-AND-PR-DRAFT.md describing the SDK/IDL account-order issue
+
+Tags: @OOBEonSol @AceDataCloud

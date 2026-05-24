@@ -1,0 +1,15 @@
+{
+  "mode": "live-blocked",
+  "createdAt": "2026-05-23T23:20:54.114Z",
+  "reason": "hard cap below expected SAP registration cost",
+  "wallet": "FJdxwPbWgFqghFaFyW9qSQW1jbMhuTrDfTrbZAuVV4SZ",
+  "balanceLamports": 200010000,
+  "hardCapSol": 0.05,
+  "minSapRegisterSol": 0.1,
+  "agentPda": "3k7By2iJBq95ZHDm2UdkQPk3mvDFymPGKXXhnLGGAzTz",
+  "usdc": 0,
+  "observation": {
+    "account": "So11111111111111111111111111111111111111112",
+    "task": "summarize SOL token account context"
+  }
+}

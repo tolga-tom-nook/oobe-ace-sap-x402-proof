@@ -1,0 +1,42 @@
+{
+  "mode": "ace-solana-x402-live-success",
+  "createdAt": "2026-05-23T23:44:40Z",
+  "wallet": "FJdxwPbWgFqghFaFyW9qSQW1jbMhuTrDfTrbZAuVV4SZ",
+  "api": "https://api.acedata.cloud/openai/chat/completions",
+  "request": {
+    "model": "gpt-4o-mini",
+    "messages": [{"role": "user", "content": "Say hi in 3 words"}],
+    "max_tokens": 10
+  },
+  "paymentRequirement": {
+    "network": "solana",
+    "amountUsdc": 0.095215,
+    "maxAmountRequired": "95215",
+    "payTo": "5iVXFrYaYWX2GUTbkQj8mDBoBhAX8bneYigS2LJTia43",
+    "asset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+  },
+  "result": {
+    "status": 200,
+    "content": "Hello! How are?",
+    "successMarker": "FULL E2E SUCCESS — Solana X402 payment accepted"
+  },
+  "settlement": {
+    "signature": "3EF2wCNajTCnei6x4ZEe3fUevCqcUAx7WZPGKssuMniAKLgvt7ztmFiAU2xbpVXVHGiytd7gFP1Eszd155ch6CZH",
+    "explorer": "https://explorer.solana.com/tx/3EF2wCNajTCnei6x4ZEe3fUevCqcUAx7WZPGKssuMniAKLgvt7ztmFiAU2xbpVXVHGiytd7gFP1Eszd155ch6CZH?cluster=mainnet-beta"
+  },
+  "postBalance": {
+    "sol": 0.20001,
+    "usdc": 9.904785
+  },
+  "caps": {
+    "hardCapSol": 0.15,
+    "hardCapUsdc": 0.5,
+    "spentSol": 0,
+    "spentUsdc": 0.095215
+  },
+  "sapRegistration": {
+    "status": "blocked-before-spend",
+    "reason": "SAP register transaction simulation fails with Anchor custom error 3012 AccountNotInitialized on global_registry despite global PDA existing; no SAP tx sent.",
+    "agentPda": "3k7By2iJBq95ZHDm2UdkQPk3mvDFymPGKXXhnLGGAzTz"
+  }
+}

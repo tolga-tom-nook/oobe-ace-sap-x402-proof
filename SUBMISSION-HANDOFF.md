@@ -6,6 +6,14 @@ Public GitHub proof repository:
 
 https://github.com/tolga-tom-nook/oobe-ace-sap-x402-proof
 
+Sponsor-visible GitHub submission issue:
+
+https://github.com/AceDataCloud/OOBEIntegration/issues/4
+
+OOBE SDK bug/evidence issue:
+
+https://github.com/OOBE-PROTOCOL/synapse-sap-sdk/issues/3
+
 Validated local commit:
 
 `94c7bec feat: add OOBE Ace SAP x402 bounty proof`
